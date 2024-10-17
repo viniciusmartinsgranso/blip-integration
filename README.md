@@ -20,6 +20,8 @@ A aplicação possui três rotas principais, cada uma com funcionalidades espec�
 ### 3. **Rota de Conversa do Contato (`/contato/:id`)**
 - Exibe a **conversa completa** com o contato selecionado.
 - As mensagens são obtidas através da **API do BLiP** e incluem tanto as enviadas quanto as recebidas.
+### 4. **Link da aplicação na internet**
+- Acesse https://blip-integration.vercel.app.
 
 ## Instalação
 
@@ -37,6 +39,11 @@ Siga os passos abaixo para executar a aplicação localmente:
    cd nome-do-repositorio
   
 3. **Execute a aplicação**
+
+- Para iniciar a aplicação, digite o comando:
+    ```bash
+    npm run start
+  ```
 - Após iniciar a aplicação, acesse pelo navegador:
    ```bash
   http://localhost:4200

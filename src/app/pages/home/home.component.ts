@@ -3,7 +3,7 @@ import { ContactService } from "../../services/chats/contact.service";
 import { ContactDto } from "../../services/chats/models/contactDto";
 import { MatCard } from "@angular/material/card";
 import { MatDivider } from "@angular/material/divider";
-import { MatMiniFabButton } from "@angular/material/button";
+import { MatButton, MatMiniFabButton } from "@angular/material/button";
 import { MatIcon } from "@angular/material/icon";
 import { take } from "rxjs";
 import { SnackbarService } from "../../services/snackbar/snackbar.service";
@@ -35,7 +35,8 @@ import { MatOption, MatSelect } from "@angular/material/select";
     MatTabGroup,
     MatTab,
     MatSelect,
-    MatOption
+    MatOption,
+    MatButton
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
