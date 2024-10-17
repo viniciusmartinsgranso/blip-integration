@@ -13,9 +13,11 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-  }
 
-  &--form {
-
+    img {
+      max-width: 100%;
+      height: auto;
+      flex-shrink: 1;
+    }
   }
 }
