@@ -1,0 +1,17 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Conversa com {{ contact.identity }}</mat-card-title>
+    <mat-card-subtitle>
+      Origem: {{ contact.source }}
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      Última atualização: {{ contact.lastUpdateDate | date: 'dd/MM/yyyy HH:mm' }}
+    </mat-card-subtitle>
+    <mat-card-subtitle>
+      Data: {{ contact.lastMessageDate | date: 'dd/MM/yyyy HH:mm' }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions (click)="redirectToThread(contact.identity)">
+    <button mat-button>Ver conversa</button>
+  </mat-card-actions>
+</mat-card>

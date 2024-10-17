@@ -1,0 +1,22 @@
+<div class="login">
+  <div class="login--header">
+    <img ngSrc="assets/logos/blip.svg" alt="BLiP Logo" height="45" width="120"/>
+    <img ngSrc="assets/logos/logo-whitewall.png" alt="WhiteWall Logo" height="78" width="384"/>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h1>Verificaremos o ID do seu Chatbot para realizar o login.</h1>
+  <mat-form-field appearance="outline">
+    <mat-label>Informe o ID do ChatBot</mat-label>
+    <input matInput
+           placeholder="Informe o ID do Chatbot"
+           type="text"
+           [(ngModel)]="apiBotKey">
+    <mat-icon matSuffix>account_circle</mat-icon>
+  </mat-form-field>
+
+  <mat-divider></mat-divider>
+
+  <button mat-flat-button (click)="submit()">Realizar o Login</button>
+</div>

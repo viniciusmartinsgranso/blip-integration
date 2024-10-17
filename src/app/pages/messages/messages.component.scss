@@ -1,0 +1,14 @@
+.messages {
+  padding: 1rem;
+
+  &--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    label {
+      font-size: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  border: .1rem solid #ccc;
+  overflow-y: auto;
+  padding: 1.7rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  max-height: 80vh;
+
+  &--messages {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--message {
+      max-width: 70%;
+      padding: .6rem;
+      border-radius: .6rem;
+      word-wrap: break-word;
+      position: relative;
+      min-width: 20%;
+
+      &--user {
+        align-self: flex-end;
+        background-color: #e0f7fa;
+      }
+
+      &--bot {
+        align-self: flex-start;
+        background-color: #f1f8e9;
+      }
+
+      &--status {
+        font-size: 0.75rem;
+        color: #888;
+        position: absolute;
+        bottom: -.1rem;
+        right: .6rem;
+      }
+
+      &--timestamp {
+        font-size: 0.75rem;
+        color: #888;
+        position: absolute;
+        bottom: -1.3rem;
+        right: 10px;
+      }
+    }
+  }
+}

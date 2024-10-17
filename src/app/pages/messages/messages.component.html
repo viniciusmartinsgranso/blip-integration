@@ -1,0 +1,12 @@
+<div class="messages">
+  <div class="messages--header">
+    <button mat-mini-fab aria-label="Botão de Voltar"
+            (click)="redirectToHome()"
+            color="purple">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <label>Essa é a sua conversa com {{ threadId }}</label>
+  </div>
+
+  <app-chat [messages]="textMessages"/>
+</div>

@@ -1,0 +1,21 @@
+<div class="chat">
+  <div class="chat--messages">
+    @for (message of messages; track message) {
+      <div class="chat--messages--message"
+           [ngClass]="{ 'chat--messages--message--user': message.direction === direction.SENT,
+           'chat--messages--message--bot': message.direction === direction.RECEIVED }"
+      >
+        <p>{{ message.content }}</p>
+
+        @if (message.direction === direction.SENT) {
+          <span class="chat--messages--message--status">
+            {{ translatedMessageStatusEnum[message.status] }}
+          </span>
+        }
+
+        <span class="chat--messages--message--timestamp">{{ message.date | date: 'dd/MM/yy HH:mm' }}</span>
+      </div>
+    }
+
+  </div>
+</div>

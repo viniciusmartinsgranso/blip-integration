@@ -1,27 +1,43 @@
-# WhiteWallChallenge
+# Aplicação Web de Contatos e Conversas do Chatbot BLiP
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+## Descrição do Projeto
+Este projeto é uma **aplicação web** desenvolvida para exibir **contatos e conversas** de um **chatbot** integrado à plataforma **BLiP**. A aplicação utiliza a API do BLiP para obter informações de contatos e suas respectivas conversas, oferecendo **paginação**, autenticação por chave de API e uma interface amigável para navegação entre as rotas.
 
-## Development server
+## Funcionalidades Principais
+A aplicação possui três rotas principais, cada uma com funcionalidades específicas:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 1. **Rota de Login (`/login`)**
+- O usuário deve inserir uma **chave de API válida** do bot da plataforma BLiP.
+- A chave é **validada** e, em caso de sucesso, é **armazenada de forma persistente** para uso nas demais rotas.
+- Caso a chave seja inválida, a aplicação exibe uma mensagem de erro e não permite o acesso às demais rotas.
 
-## Code scaffolding
+### 2. **Rota Raiz (`/`)**
+- Após o **login bem-sucedido**, o usuário é redirecionado para a rota raiz.
+- A rota exibe uma **lista paginada dos contatos** do bot.
+- O **número de contatos exibidos por página** é configurável (por exemplo, 10 contatos por página).
+- O usuário pode **clicar em um contato** para ser redirecionado para a **página de conversa** desse contato.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 3. **Rota de Conversa do Contato (`/contato/:id`)**
+- Exibe a **conversa completa** com o contato selecionado.
+- As mensagens são obtidas através da **API do BLiP** e incluem tanto as enviadas quanto as recebidas.
 
-## Build
+## Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Siga os passos abaixo para executar a aplicação localmente:
 
-## Running unit tests
+1. **Clone o Repositório**:
+   ```bash
+   git clone <url-do-repositorio>
+   cd nome-do-repositorio
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Instale as Dependências**:
+- Certifique-se de ter o Node.js na versão 20.12.1 instalado. Em seguida, execute:
+   ```bash
+   git clone <url-do-repositorio>
+   cd nome-do-repositorio
+  
+3. **Execute a aplicação**
+- Após iniciar a aplicação, acesse pelo navegador:
+   ```bash
+  http://localhost:4200
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,45 @@
+<div class="home">
+  <div class="home--header">
+    <div class="home--header--options">
+      <label>Filtros:</label>
+      <div class="home--header--options--filters">
+        <mat-form-field appearance="outline">
+          <mat-label>Itens por página:</mat-label>
+          <input matInput
+                 placeholder="Informe o número de itens por página."
+                 type="number"
+                 min="1"
+                 [(ngModel)]="pageSizeInput">
+          <mat-icon matSuffix>account_circle</mat-icon>
+
+          <button (click)="onContactsPageSizeChange()">Aplicar</button>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <button mat-mini-fab aria-label="Botão de Logout"
+            (click)="onLogout()"
+            color="purple">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </div>
+
+  @if (contacts.length) {
+    <h3>Esses são seus contatos:</h3>
+    @for (contact of contacts; track contact.identity) {
+      <mat-divider style="margin: 1rem 0"/>
+
+      <app-contacts-card [contact]="contact"/>
+    }
+
+    <mat-paginator
+        [length]="totalContacts"
+        [pageSize]="contactsPageSize"
+        (page)="onContactsPageChange($event)">
+    </mat-paginator>
+
+  } @else {
+    <h1>Oops...</h1>
+    <h3>Ainda não possuem conversas para esse bot :/</h3>
+  }
+</div>
